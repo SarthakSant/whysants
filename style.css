@@ -1,0 +1,168 @@
+/* --- Basic Setup & Theming --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0e6d2; /* Creamy off-white for a vintage feel */
+    overflow: hidden; /* Prevents scrollbars during animations */
+}
+
+.background-texture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Optional: Add a subtle texture like film grain or leather */
+    background-image: url('path/to/your/background-texture.png'); 
+    opacity: 0.05;
+    z-index: -1;
+}
+
+/* --- Jacket Overlay --- */
+#jacket-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jacket-side {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50.5%; /* Slight overlap to hide the center seam */
+    background-size: cover;
+    transition: transform 1.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#jacket-left {
+    left: 0;
+    /* IMPORTANT: Replace with the left half of your jacket image */
+    background-image: url('bg1left.png'); /* <-- NEW WORKING LINK */
+    background-position: right center;
+}
+
+#jacket-right {
+    right: 0;
+    /* IMPORTANT: Replace with the right half of your jacket image */
+    background-image: url('bg1right.png'); /* <-- NEW WORKING LINK */
+    background-position: left center;
+}
+
+/* --- Jacket Opening Animation --- */
+#jacket-left.opened {
+    transform: translateX(-100%);
+}
+
+#jacket-right.opened {
+    transform: translateX(100%);
+}
+
+#click-prompt {
+    z-index: 101;
+    text-align: center;
+    transition: opacity 0.5s ease-out;
+}
+
+#click-prompt h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    animation: pulse 2.5s infinite;
+}
+
+/* --- Main Content (Revealed) --- */
+.content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.content .tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 3rem;
+    max-width: 500px;
+}
+
+.content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.content .description {
+    max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.content .connect {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.content .connect p {
+    margin-bottom: 0.5rem;
+}
+
+.content .connect span {
+    margin: 0 0.5rem;
+}
+
+/* --- Content Animation Classes --- */
+.animate-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Keyframe Animations --- */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .content h1 { font-size: 4rem; }
+    .content h2 { font-size: 2rem; }
+    #click-prompt h2 { font-size: 1.5rem; }
+}
