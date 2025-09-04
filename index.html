@@ -3,38 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhySant's - Coming Soon</title>
+    <title>WhySant's - Redefining Retros</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-    <div class="background-texture"></div>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">WhySant's</div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-items">
+                <a href="#home">Home</a>
+                <a href="#collections">Collections</a>
+                <a href="#philosophy">Philosophy</a>
+                <a href="#notify">Notify</a>
+            </div>
+        </nav>
+    </header>
 
-    <div id="jacket-overlay">
-        <div class="jacket-side" id="jacket-left"></div>
-        <div class="jacket-side" id="jacket-right"></div>
-        <div id="click-prompt">
-            <h2>Unveil The Legacy</h2>
+    <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="video/Timeline 1.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <div class="coming-soon">Coming Soon</div>
+            <h1>WHYSANT'S</h1>
+            <div class="subtitle">Redefining Retros</div>
+            <p class="description">
+                Where timeless meets contemporary. A rebellion against the ordinary, 
+                crafted for those who understand that true style transcends trends.
+            </p>
         </div>
-    </div>
+        <div class="scroll-indicator">Scroll</div>
+    </section>
 
-    <main class="content">
-        <h1 class="animate-item">WhySant's</h1>
-        <p class="tagline animate-item">A house built not on trends, but on timeless rebellion.</p>
-        <h2 class="animate-item">A New Era Is Coming Soon</h2>
-        <p class="description animate-item">
-            We don't follow trends; we resurrect legacies, craft stories, and give the modern generation a wardrobe that speaks with the same confidence as the legends who came before.
-        </p>
-        <div class="connect animate-item">
-            <p>Connect with us:</p>
-            <span>@whysants</span>
-            <span>&bull;</span>
-            <span>(+91) 9822766484</span>
+    <section class="collections" id="collections">
+        <h2 class="section-title">Collections</h2>
+        <div class="collections-grid">
+            <div class="collection-item">
+                <div class="collection-photos">
+                    <div class="photos-slider">
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/15cYcyS8/image.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/MH13LSjr/image-2.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/yYzbZkMq/image-3.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/XvDPGxbx/image-5.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/1zCYbB7w/image-6.png');"></div>
+                    </div>
+                </div>
+                <div class="collection-content">
+                    <h3>Jackets</h3>
+                    <div class="items"><span>Shimmer & Shine</span><span>Crops • Denims</span><span>Timeless Leather</span><span>Wildlifes</span></div>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="collection-photos">
+                    <div class="photos-slider">
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/XvLvvkrF/bottom-1.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/0NPQxByP/bottom-2.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/Vkj6x81K/bottom-4.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/1tz3VVFd/bottom-5.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/DZYyrfdw/bottom-6.png');"></div>
+                    </div>
+                </div>
+                <div class="collection-content">
+                    <h3>Bottoms</h3>
+                    <div class="items"><span>Flared • Fade</span><span>Bell Bottoms</span><span>Classic Leather</span><span>Denims</span></div>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="collection-photos">
+                    <div class="photos-slider">
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/63xFFkWf/ascots-1.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/Nj5hX8Cm/ascots-2.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/P5cgQL0c/ascots-3.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/Bndz1rKf/ascots-4.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/YSWJnrHS/ascots-5.png');"></div>
+                    </div>
+                </div>
+                <div class="collection-content">
+                    <h3>Ascots</h3>
+                    <div class="items"><span>Ascots • Scarfs</span><span>Shines</span><span>Classics • Opulent</span></div>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="collection-photos">
+                    <div class="photos-slider">
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/Hny3w28v/shirts-1.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/N0sN3mZL/shirts-2.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/Kz40zFG2/shirts-3.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/KzVJ3Vjg/shirts-4.png');"></div>
+                        <div class="photo-item" style="background-image: url('https://i.postimg.cc/43W8snTP/shirts-5.png');"></div>
+                    </div>
+                </div>
+                <div class="collection-content">
+                    <h3>Shirts</h3>
+                    <div class="items"><span>Paisley • Denims</span><span>Classic Whites</span><span>Sailor • Flared Arms</span></div>
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
+
+    <section class="philosophy" id="philosophy">
+        <div class="philosophy-content">
+            <h2 class="section-title">Philosophy</h2>
+            <p>We don't follow trends — we <span class="highlight">resurrect legacies</span>, craft stories, and give the modern generation a wardrobe that speaks with the same confidence as the legends who came before.</p>
+            <p>A house built not on trends, but on <span class="highlight">timeless rebellion</span>. Every piece is crafted to echo the golden age of style, where silhouettes had character and clothes weren't worn, they were lived.</p>
+        </div>
+    </section>
+
+    <section class="notify" id="notify">
+        <div class="notify-content">
+            <h2>Stay Updated</h2>
+            <form class="notify-form" action="https://formspree.io/f/xrbaoagj" method="POST">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Enter your email</label>
+                </div>
+                <button type="submit">→</button>
+            </form>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>© 2025 WhySant's</div>
+            <div class="footer-links">
+                <a href="tel:+919822766484">+91 9822766484</a>
+                <a href="mailto:hello@whysants.com">whysants.com</a>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
